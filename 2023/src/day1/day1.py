@@ -56,7 +56,7 @@ def deal_with_digit(line: str) -> int:
 
 
 def main() -> None:
-    with open("day1.txt", "r") as f:
+    with open("input", "r") as f:
         values = [deal_with_digit(x) for x in f if len(x.strip()) > 1]
         f.close()
         print(sum(values))

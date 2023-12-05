@@ -161,7 +161,7 @@ cython_debug/
 
 
 # Custom ignores
-/src/day1/solution1.py
-/src/day2/solution2.py
-/src/day3/solution3.py
-/src/day4/solution4.py
+2023/src/day1/solution1.py
+2023/src/day2/solutions2.py
+2023/src/day3/solution3.py
+2023/src/day4/solution4.py
