@@ -12,26 +12,27 @@ def solver(data: list[list[int]]):
             if x != 0:
                 diff = data[count][x] - data[count][x - 1]
                 seq_cal.append(diff)
-        print(seq_cal)
         count += 1
         data.append(seq_cal)
     return data
 
 
-def calculate_next_seq(data: list[list[int]]):
-    add_numbers = [seq[-1] for seq in data]
-    return sum(add_numbers)
+def add_extrapolate(data: list[list[int]]):
+    result = [seq[-1] for seq in data]
+    return sum(result)
 
 
-def part_1(data) -> int:
+def part_1(data: list[list[int]]) -> int:
     solved = solver(data)
-    total = calculate_next_seq(solved)
-    return total
+    return add_extrapolate(solved)
 
 
 with open("input") as f:
     data = create_data(f)
 
     # part 1
-    answer = [part_1([seq]) for seq in data]
-    print(sum(answer))
+    part_1_ans = [part_1([seq]) for seq in data]
+    print(sum(part_1_ans))
+
+    part_2_ans = [part_1([seq[::-1]]) for seq in data]
+    print(sum(part_2_ans))
