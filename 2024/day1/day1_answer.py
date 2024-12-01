@@ -14,13 +14,13 @@ def main() -> None:
         counter_1 = Counter(col1_count)
         counter_1.update(col2)
 
-    answer2 = 0
-    for key, value in counter_1.items():
-        if key in col1:
-            answer2 += key * value
+        answer2 = 0
+        for key, value in counter_1.items():
+            if key in col1:
+                answer2 += key * value
 
-    print(f"Answer 1: {answer1}")
-    print(f"Answer 2: {answer2}")
+        print(f"Answer 1: {answer1}")
+        print(f"Answer 2: {answer2}")
 
 
 
